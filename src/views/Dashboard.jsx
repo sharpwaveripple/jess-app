@@ -114,45 +114,77 @@ class Dashboard extends Component {
             </Col>
           </Row>
 
-          <Row>
-            <Col md={6}>
+          // <Row>
+          //   <Col md={6}>
+          //     <Card
+          //       id="chartActivity"
+          //       title="2014 Sales"
+          //       category="All products including Taxes"
+          //       stats="Data information certified"
+          //       statsIcon="fa fa-check"
+          //       content={
+          //         <div className="ct-chart">
+          //           <ChartistGraph
+          //             data={dataBar}
+          //             type="Bar"
+          //             options={optionsBar}
+          //             responsiveOptions={responsiveBar}
+          //           />
+          //         </div>
+          //       }
+          //       legend={
+          //         <div className="legend">{this.createLegend(legendBar)}</div>
+          //       }
+          //     />
+          //   </Col>
+
+          //   <Col md={6}>
+          //     <Card
+          //       title="Tasks"
+          //       category="Backend development"
+          //       stats="Updated 3 minutes ago"
+          //       statsIcon="fa fa-history"
+          //       content={
+          //         <div className="table-full-width">
+          //           <table className="table">
+          //             <Tasks />
+          //           </table>
+          //         </div>
+          //       }
+          //     />
+          //   </Col>
+
+            <Col md={12}>
               <Card
-                id="chartActivity"
-                title="2014 Sales"
-                category="All products including Taxes"
-                stats="Data information certified"
-                statsIcon="fa fa-check"
+                title="Leaderboard"
+                category="My friends"
+                ctTableFullWidth
+                ctTableResponsive
                 content={
-                  <div className="ct-chart">
-                    <ChartistGraph
-                      data={dataBar}
-                      type="Bar"
-                      options={optionsBar}
-                      responsiveOptions={responsiveBar}
-                    />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendBar)}</div>
+                  <Table striped hover>
+                    <thead>
+                      <tr>
+                        {thArray.map((prop, key) => {
+                          return <th key={key}>{prop}</th>;
+                        })}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {tdArray.map((prop, key) => {
+                        return (
+                          <tr key={key}>
+                            {prop.map((prop, key) => {
+                              return <td key={key}>{prop}</td>;
+                            })}
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </Table>
                 }
               />
             </Col>
 
-            <Col md={6}>
-              <Card
-                title="Tasks"
-                category="Backend development"
-                stats="Updated 3 minutes ago"
-                statsIcon="fa fa-history"
-                content={
-                  <div className="table-full-width">
-                    <table className="table">
-                      <Tasks />
-                    </table>
-                  </div>
-                }
-              />
-            </Col>
           </Row>
         </Grid>
       </div>
