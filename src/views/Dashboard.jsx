@@ -72,7 +72,7 @@ class Dashboard extends Component {
             </Col>
           </Row>
           <Row>
-            <Col md={8}>
+            <Col md={4}>
               <Card
                 statsIcon="fa fa-history"
                 id="chartHours"
@@ -94,6 +94,8 @@ class Dashboard extends Component {
                 }
               />
             </Col>
+
+
             <Col md={4}>
               <Card
                 statsIcon="fa fa-clock-o"
@@ -115,7 +117,7 @@ class Dashboard extends Component {
             </Col>
           </Row>
         <Row>
-        <Col md={12}>
+        <Col md={8}>
             <Card
             title="Leaderboard"
             category="My friends"
@@ -147,48 +149,6 @@ class Dashboard extends Component {
         </Col>
         </Row>
 
-          <Row>
-            <Col md={6}>
-              <Card
-                id="chartActivity"
-                title="2014 Sales"
-                category="All products including Taxes"
-                stats="Data information certified"
-                statsIcon="fa fa-check"
-                content={
-                  <div className="ct-chart">
-                    <ChartistGraph
-                      data={dataBar}
-                      type="Bar"
-                      options={optionsBar}
-                      responsiveOptions={responsiveBar}
-                    />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendBar)}</div>
-                }
-              />
-            </Col>
-
-            <Col md={6}>
-              <Card
-                title="Tasks"
-                category="Backend development"
-                stats="Updated 3 minutes ago"
-                statsIcon="fa fa-history"
-                content={
-                  <div className="table-full-width">
-                    <table className="table">
-                      <Tasks />
-                    </table>
-                  </div>
-                }
-              />
-            </Col>
-
-
-          </Row>
         </Grid>
       </div>
     );
