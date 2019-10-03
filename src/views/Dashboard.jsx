@@ -21,6 +21,7 @@ import { Grid, Row, Col, Table } from "react-bootstrap";
 
 import { Card } from "components/Card/Card.jsx";
 import { StatsCard } from "components/StatsCard/StatsCard.jsx";
+import { thArray, tdArray } from "variables/Variables.jsx";
 import { Tasks } from "components/Tasks/Tasks.jsx";
 import {
   dataPie,
