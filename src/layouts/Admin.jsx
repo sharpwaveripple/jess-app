@@ -160,7 +160,6 @@ class Admin extends Component {
   render() {
     return (
       <div className="wrapper">
-        // <NotificationSystem ref="notificationSystem" style={style} />
         <div id="main-panel" className="main-panel" ref="mainPanel">
           <AdminNavbar
             {...this.props}
